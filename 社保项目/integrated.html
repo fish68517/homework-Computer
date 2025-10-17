@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title id="titleID"></title>
+    
+    <style>
+        /* Bootstrap CSS (vendor.css) */
+        /*!
+         * Bootstrap v3.2.0 (http://getbootstrap.com)
+         * Copyright 2011-2014 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+        html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0;font-size:2em}mark{color:#000;background:#ff0}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver}textarea{overflow:auto}optgroup{font-weight:700}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}
+        
+        /* Bootstrap Grid and Components */
+        *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#428bca;text-decoration:none}a:focus,a:hover{color:#2a6496;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.carousel-inner>.item>a>img,.carousel-inner>.item>img,.img-responsive,.thumbnail>img,.thumbnail a>img{display:block;width:100%\9;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{display:inline-block;width:100%\9;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+        
+        /* Bootstrap Container and Grid */
+        .container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}
+        
+        @media (min-width:768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}}
+        
+        @media (min-width:992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}}
+        
+        @media (min-width:1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}}
+        
+        /* Custom CSS (main.css) */
+        @charset "utf-8";
+        body{font-family:微软雅黑;font-size:14px;background:#f6f6f6}
+        a,body{color:#3c3c3c}
+        a,a:hover{text-decoration:none}
+        a:hover{color:#0073df}
+        .pad0{padding:0}
+        .fl{float:left}
+        .fr{float:right}
+        .fg{width:90%;height:10px}
+        .clear,.fg{clear:both}
+        .hand{cursor:pointer}
+        button,input,optgroup,option,select,textarea{font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;outline:none}
+        dd,dl,dt,li,ol,ul{list-style:none;margin:0;padding:0;border:0}
+        input::-ms-clear{display:none}
+        html button::-moz-focus-inner{border-color:transparent!important}
+        .bodyCss{background-color:#fff;min-height:800px;overflow-x:hidden}
+        .head{margin:45px auto 0;height:50px}
+        .head_line{border-bottom:1px solid #dcdcdc;margin-right:30px}
+        .head_title{text-align:center;margin-top:-15px;font-size:22px;font-weight:700;color:#f36d00;padding:0}
+        .descript{width:90%;min-width:500px;height:150px;margin:20px 10%}
+        .descript_block{width:200px;height:110px;float:left;margin:0 15px}
+        .descript_block_text01{width:35px;height:35px;line-height:35px;text-align:center;background:url(../images/N_bd01.png) no-repeat;font-size:22px;font-weight:700;color:#fff}
+        .descript_block_text02{width:150px;height:35px;line-height:35px;text-align:left;padding-left:10px;background:url(../images/N_bd02.jpg) 0 100% no-repeat;font-size:16px;color:#333}
+        .descript_block_text03{width:150px;height:70px;line-height:20px;color:#999;font-size:12px;margin:20px 0 0 45px;padding-left:0}
+        .form_box{width:50%;margin:30px auto;height:160px}
+        .form_row{margin:15px 0}
+        .form_row_label{height:32px;line-height:32px}
+        .label_width{width:90px}
+        .input_btnBox{width:200px;height:150px;float:left;padding-left:10px}
+        .input_inputBox{width:400px;height:140px;float:left}
+        .input_valueBox{border:0;float:left;margin-right:20px}
+        .input_value{border:1px solid #cbcbcb;padding:0 10px}
+        .input_value,.input_value_hover:hover{height:32px;line-height:32px;background:#f8f8f8}
+        .input_value_hover:hover{border:1px solid #007adb}
+        .input_verificationCode_value,.input_verificationCode_value:hover{width:180px}
+        .input_verificationCode_img{width:100px;height:32px}
+        .input_submit{width:160px;height:36px;line-height:36px;background:#f60;float:left;margin:55px 0 0 10px;-moz-border-radius:30px;-webkit-border-radius:30px;border-radius:30px}
+        .input_submit div{width:160px;height:36px;text-align:center;color:#fff;display:block;font-size:16px;font-weight:700}
+        .input_submit div:hover{text-align:center;color:#fff;background:#ff7a21;-moz-border-radius:30px;-webkit-border-radius:30px;border-radius:30px}
+        .footer_img1{display:block;margin:30px auto;height:300px;width:600px}
+        .footer_img2{display:none}
+        
+        @media screen and (orientation:portrait) and (max-width:720px){
+            .descript{display:none}
+            .input_submit{margin:30px 0 0 calc(50% - 80px)}
+            .descript_nbsp{display:none}
+            .head_title{font-size:18px}
+            .bodyCss{background-color:#fff;min-height:600px}
+        }
+        
+        @media screen and (max-width:995px){
+            .head_line{display:none}
+        }
+    </style>
+</head>
+<body>
+    <!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="container bodyCss" style="display: block" id="mainbody">
+        <div class="row head">
+            <div class="col-md-1"></div>
+            <div class="col-md-2 head_line" style="margin-right: 0"></div>
+            <div class="col-md-6 head_title" id="topNmae"></div>
+            <div class="col-md-2 head_line"></div>
+            <div class="col-md-1"></div>
+        </div>
+        
+        <div id="descript" class="row descript">
+            <div class="descript_block">
+                <div style="width: 200px">
+                    <div class="descript_block_text01" style="float: left">1</div>
+                    <div class="descript_block_text02" style="float: left">录入验证号码</div>
+                </div>
+                <div>
+                    <div class="descript_nbsp">&nbsp;</div>
+                    <div class="descript_block_text03" id="inputNo"></div>
+                </div>
+            </div>
+            <div class="descript_block">
+                <div style="width: 200px">
+                    <div class="descript_block_text01" style="float: left">2</div>
+                    <div class="descript_block_text02" style="float: left">图形校验码</div>
+                </div>
+                <div>
+                    <div class="descript_nbsp">&nbsp;</div>
+                    <div class="descript_block_text03">请按图所示，输入图形验证码，如看不清请按图片刷新</div>
+                </div>
+            </div>
+            <div class="descript_block">
+                <div style="width: 200px">
+                    <div class="descript_block_text01" style="float: left">3</div>
+                    <div class="descript_block_text02" style="float: left">点击查询按钮</div>
+                </div>
+                <div>
+                    <div class="descript_nbsp">&nbsp;</div>
+                    <div class="descript_block_text03">纸质单据内容如有修改，请以在线验证的内容为准</div>
+                </div>
+            </div>
+            <div class="descript_block">
+                <div style="width: 200px">
+                    <div class="descript_block_text01" style="float: left">4</div>
+                    <div class="descript_block_text02" style="float: left">显示表单</div>
+                </div>
+                <div>
+                    <div class="descript_nbsp">&nbsp;</div>
+                    <div class="descript_block_text03" style="">本页面展示的电子表单内容仅提供给用户用于核对纸质单据的真实性</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer_img2" class="footer_img2">
+            <img class="img-responsive" src="images/N_bd04.jpg">
+        </div>
+        
+        <div id="form" class="row" style="width:50%;margin: 30px auto;height: 160px">
+            <div class="col-md-9">
+                <div class="row form_row">
+                    <label class="col-md-4 form_row_label">验证号码：</label>
+                    <input id="verificationValue" type="text" onfocus="getFocus()" onblur="loseFocus()" class="col-md-8 input_value input_value_hover" placeholder="请输入32位验证号码">
+                </div>
+                <div class="row form_row">
+                    <label class="col-md-4 form_row_label">验证码：</label>
+                    <input id="captchaValue" style="border-right-width: 0" type="text" onfocus="getFocus()" onblur="loseFocus()" placeholder="请输入图片的验证码" class="col-md-5 input_value input_value_hover">
+                    <img class="col-md-3 pad0" id="captchaImg" onclick="getCaptcha()" style="border: 1px solid #cbcbcb" width="100" height="32">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input_submit" style="margin-top: 65px">
+                    <div onclick="submintCode()">查 询</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer_img1" class="footer_img1">
+            <img class="img-responsive" src="images/N_bd04.jpg">
+        </div>
+    </div>
+    
+    <div id="cover" onclick="hidden_div()" style="position: absolute; right: 0px; bottom: 0px; width: 100%; height: 100%; z-index: 5; left: 0px; top: 0px; background-image: url('images/mask_bg.png'); background-repeat: no-repeat; background-size:100%; display: none">
+        <img style="position:absolute; width: 80%; z-index:1;float:right;top:0px;right:0px" src="images/weixin_text.png">
+    </div>
+
+    <script>
+        "use strict";
+
+        function hidden_div() {
+            document.getElementById("cover").style.display = "none"
+        }
+
+        function isWeiXin() {
+            var e = window.navigator.userAgent.toLowerCase();
+            return "micromessenger" == e.match(/MicroMessenger/i)
+        }
+
+        function osType() {
+            return /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) ? "ios" : /(Android)/i.test(navigator.userAgent) ? "android" : "pc"
+        }
+
+        function getCaptcha() {
+            var e = "api/verify/getImgCaptchaDTO",
+                t = e + "/";
+            $http(t, "get", !0, 3e3, function(t) {
+                captchaId = JSON.parse(t).id, document.getElementById("captchaImg").src = e + "/" + captchaId
+            }, function(e) {
+                alert(e)
+            })
+        }
+
+        function setCity(e) {
+            "0" === e ? (document.getElementById("titleID").innerHTML = "连云港市缴费报表验证", document.getElementById("topNmae").innerHTML = "连云港市社会保险电子表单在线验证平台", document.getElementById("inputNo").innerHTML = "目前可提供验证的单据凭证包括：连云港市社会保险缴费证明") : "1" === e && (document.getElementById("titleID").innerHTML = "河南社保表单验证", document.getElementById("topNmae").innerHTML = "河南社保电子表单在线验证平台", document.getElementById("inputNo").innerHTML = "录入验证号码为32位数字与字母的组合，录入时请认真核对")
+        }
+
+        function closeDialog() {
+            document.getElementById("haha").style.display = "none", document.getElementById("hehe").style.display = "none"
+        }
+
+        function submintCode() {
+            var e = document.getElementById("verificationValue").value,
+                t = document.getElementById("captchaValue").value,
+                n = null,
+                o = "api/verify/verifyFileWebServerUrl?signNumber=" + e + "&&captchId=" + captchaId + "&&captchaword=" + t + "&&idCardValue=" + n,
+                i = "api/verify/getFileWebServerUrl?signNumber=" + e;
+            "" === e || "" === t ? "" === e && "" != t ? alert("请输入验证号码。") : "" != e && "" === t ? alert("请输入验证码。") : alert("请输入查询信息。") : $http(o, "post", !1, 3e3, function(e) {
+                var t = JSON.parse(e).url;
+                t === !0 && window.open(i), getCaptcha()
+            }, function(e) {
+                var t = (JSON.parse(e), JSON.parse(e).detail);
+                void 0 === t ? alert("验证码有误") : alert(t), getCaptcha()
+            })
+        }
+
+        function b64Encode(e) {
+            return btoa(encodeURIComponent(e))
+        }
+
+        function _base64ToArrayBuffer(e) {
+            for (var t = window.atob(e), n = t.length, o = new Uint8Array(n), i = 0; i < n; i++) o[i] = t.charCodeAt(i);
+            return o.buffer
+        }
+
+        function $http(e, t, n, o, i, a) {
+            var r = new XMLHttpRequest,
+                d = !1,
+                s = setTimeout(function() {
+                    d = !0, r.abort()
+                }, o);
+            r.open(t, e, n), r.onreadystatechange = function() {
+                4 === r.readyState && (d || (clearTimeout(s), r.status >= 200 && r.status < 300 ? i(r.responseText) : a(r.responseText)))
+            }, r.send(null)
+        }
+
+        function $http1(e, t, n, o, i, a) {
+            var r = new XMLHttpRequest,
+                d = !1,
+                s = setTimeout(function() {
+                    d = !0, r.abort()
+                }, o);
+            r.responseType = "arraybuffer", r.open(t, e, n), r.onreadystatechange = function() {
+                4 === r.readyState && (d || (clearTimeout(s), r.status >= 200 && r.status < 300 ? i(r.response) : a(r.response)))
+            }, r.send(null)
+        }
+
+        function removeClass(e, t) {
+            hasClass(e, t) && (e.className = e.className.replace(new RegExp("(\\s|^)" + t + "(\\s|$)"), " "))
+        }
+
+        function browserRedirect() {
+            var e = navigator.userAgent.toLowerCase(),
+                t = "ipad" == e.match(/ipad/i),
+                n = "iphone os" == e.match(/iphone os/i),
+                o = "midp" == e.match(/midp/i),
+                i = "rv:1.2.3.4" == e.match(/rv:1.2.3.4/i),
+                a = "ucweb" == e.match(/ucweb/i),
+                r = "android" == e.match(/android/i),
+                d = "windows ce" == e.match(/windows ce/i),
+                s = "windows mobile" == e.match(/windows mobile/i);
+            if (t || n || o || i || a || r || d || s) {
+                var c = document.getElementById("form"),
+                    l = document.getElementsByTagName("label");
+                c.style.width = "auto", c.style.margin = "auto", c.style.height = "auto";
+                for (var u = 0; u < l.length; u++) l[u].style.display = "none";
+                var m = document.getElementById("captchaImg");
+                document.getElementById("verificationValue").style.width = "100%", document.getElementById("captchaValue").style.width = "calc(100% - 100px)", document.getElementById("captchaValue").style.cssFloat = "left", m.style.width = "100px", m.style.cssFloat = "left", e.indexOf("samsung") > 0 || e.indexOf("xiaomi") > 0 || e.indexOf("mqqbrowser") > 0 || e.indexOf("chrome") > 0 ? (document.getElementById("footer_img1").style.display = "none", document.getElementById("footer_img2").style.display = "block", document.getElementById("descript").style.display = "none", getFocus = function() {}, loseFocus = function() {}) : (document.getElementById("footer_img1").style.display = "none", document.getElementById("footer_img2").style.display = "block", document.getElementById("descript").style.display = "none")
+            }
+        }
+
+        function sAlert(e) {
+            var t, n, o;
+            t = 350, n = 100, o = "#336699";
+            var i, a;
+            i = document.body.offsetWidth, a = document.body.offsetHeight, console.log("sWidth：" + i + ",msgw:" + t);
+            var r = document.createElement("div");
+            r.setAttribute("id", "bgDiv"), r.style = "position:absolute;top:0;left:0;background-color:#777;opacity:0.6;filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75);width:" + i + "px; height:" + a + "px;", document.body.appendChild(r);
+            var d = document.createElement("div");
+            d.setAttribute("id", "msgDiv"), d.setAttribute("align", "center"), d.style.position = "absolute", d.style.left = (i - t) / 2 + "px", d.style.top = document.documentElement.scrollTop + (a - n) / 6 + "px", d.style.backgroundColor = "white", d.style.font = "14px/1.6em Verdana, Geneva, Arial, Helvetica, sans-serif", d.style.border = "1px solid" + o, d.style.width = t + "px", d.style.height = n + "px";
+            var s = document.createElement("h6");
+            s.setAttribute("id", "msgTitle"), s.setAttribute("align", "right"), s.style.margin = "0", s.style.height = "18px", s.style.padding = "3px", s.style.lineHeight = "10px !important", s.style.backgroundColor = "#336699", s.style.border = "1px solid #336699", s.style.font = "12px !important Verdana, Geneva, Arial, Helvetica, sans-serif", s.style.color = "white", s.style.cursor = "pointer", s.style.filter = "progid:DXImageTransform.Microsoft.Alpha(startX=20, startY=20,finishX=100, finishY=100,style=1,opacity=75,finishOpacity=100)", s.innerHTML = "关闭", s.onclick = function() {
+                document.body.removeChild(r), document.getElementById("msgDiv").removeChild(s), document.body.removeChild(d)
+            }, document.body.appendChild(d), document.getElementById("msgDiv").appendChild(s);
+            var c = document.createElement("p");
+            c.style.margin = "1em 0", c.setAttribute("id", "msgTxt"), c.innerHTML = e, document.getElementById("msgDiv").appendChild(c)
+        }
+
+        function stringToBytes(e) {
+            for (var t, n, o = [], i = 0; i < e.length; i++) {
+                t = e.charCodeAt(i), n = [];
+                do n.push(255 & t), t >>= 8; while (t);
+                o = o.concat(n.reverse())
+            }
+            return o
+        }
+
+        function showPdf(e) {
+            document.getElementById("container");
+            container.style.display = "block";
+            var t = convertDataURIToBinary(e);
+            PDFJS.workerSrc = "../app/scripts/pdf.worker.js", PDFJS.getDocument(t).then(function(e) {
+                var t = (document.getElementById("pop"), e.numPages),
+                    n = function(o) {
+                        e.getPage(o).then(function(e) {
+                            var t = 2,
+                                n = e.getViewport(t),
+                                o = document.getElementById("the-canvas");
+                            o.height = n.height, o.width = n.width, e.render({
+                                canvasContext: o.getContext("2d"),
+                                viewport: n
+                            })
+                        }), o < t && (o++, n(o))
+                    };
+                n(1)
+            })
+        }
+
+        function convertDataURIToBinary(e) {
+            for (var t = window.atob(e), n = t.length, o = new Uint8Array(new ArrayBuffer(n)), i = 0; i < n; i++) o[i] = t.charCodeAt(i);
+            return o
+        }
+
+        function go() {
+            window.open("/app/showPDF.html")
+        }
+
+        function goto(e) {
+            var t = atob(e);
+            PDFJS.workerSrc = "//mozilla.github.io/pdf.js/build/pdf.worker.js";
+            var n = PDFJS.getDocument({
+                data: t
+            });
+            n.promise.then(function(e) {
+                console.log("PDF loaded");
+                var t = 1;
+                e.getPage(t).then(function(e) {
+                    console.log("Page loaded");
+                    var t = 1.5,
+                        n = e.getViewport(t),
+                        o = document.getElementById("the-canvas"),
+                        i = o.getContext("2d");
+                    o.height = n.height, o.width = n.width;
+                    var a = {
+                            canvasContext: i,
+                            viewport: n
+                        },
+                        r = e.render(a);
+                    r.then(function() {
+                        console.log("Page rendered")
+                    })
+                })
+            }, function(e) {
+                console.error(e)
+            })
+        }
+
+        window.onload = function() {
+            if ("ios" === osType() && isWeiXin()) {
+                var e = document.getElementById("cover");
+                e.style.height = document.body.scrollHeight + "px", e.style.width = document.body.scrollWidth + "px", e.style.display = "block"
+            }
+        };
+
+        var captchaId, getUrlParamObj = function() {
+                function e(e) {
+                    var t;
+                    for (t in e) return !1;
+                    return !0
+                }
+                for (var t = {}, n = location.search.substring(1), o = n.split("&"), i = 0; i < o.length; i++) {
+                    var a = o[i].indexOf("=");
+                    if (a != -1) {
+                        var r = o[i].substring(0, a),
+                            d = o[i].substring(a + 1);
+                        t[r] = decodeURI(d)
+                    }
+                }
+                return !e(t) && t
+            },
+            param = getUrlParamObj();
+        0 != param && void 0 != param.code && "undefined" != param.code && (document.getElementById("verificationValue").value = param.code), getCaptcha();
+        var cityType = "1";
+        setCity(cityType);
+        var getFocus = function() {},
+            loseFocus = function() {};
+        browserRedirect();
+    </script>
+</body>
+</html>
